@@ -83,7 +83,7 @@ public class MaxCounters {
         int max = -1, current_min = 0;
 
         for (int i = 0; i < n; i++) {
-            //double check if the element of array A is within the conditional range
+            //check if the element of array A fulfils the conditional range
             if (A[i] >= 1 && A[i] <= N) {
                 //if yes, check if the element in counter array is less than the current min
                 if (counter[A[i] - 1] < current_min) {
@@ -92,7 +92,7 @@ public class MaxCounters {
                 }
                 //and perform the addition as normal
                 counter[A[i] - 1] = counter[A[i] - 1] + 1;
-                //check if this element is now the max ans store it as max
+                //check if this element in counter array is now the max ans store it as max
                 if (counter[A[i] - 1] > max) {
                     max = counter[A[i] - 1];
                 }
